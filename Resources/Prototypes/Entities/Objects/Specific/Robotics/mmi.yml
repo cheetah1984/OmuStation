@@ -31,16 +31,11 @@
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
     channels:
-    - Binary # Goobstation - replaced with collective mind # Omu, make binary a radio again.
+    - Binary
   - type: ActiveRadio
     channels:
-    - Binary # Goobstation - replaced with collective mind # Omu, make binary a radio again.
+    - Binary
     - Common
-  # Goobstation
-  #- type: CollectiveMind # Omu, make binary a radio again.
-  #  defaultChannel: Binary
-  #  channels:
-  #  - Binary
   - type: NameIdentifier
     group: MMI
   - type: DoAfter
@@ -139,16 +134,11 @@
     - type: IntrinsicRadioReceiver
     - type: IntrinsicRadioTransmitter
       channels:
-      - Binary # Goobstation - replaced with collective mind # Omu, make binary a radio again.
+      - Binary
     - type: ActiveRadio
       channels:
-      - Binary # Goobstation - replaced with collective mind # Omu, make binary a radio again.
+      - Binary
       - Common
-    # Goobstation
-    #- type: CollectiveMind # Omu, make binary a radio again.
-    #  defaultChannel: Binary
-    #  channels:
-    #  - Binary
     - type: NameIdentifier
       group: PositronicBrain
     - type: DoAfter
