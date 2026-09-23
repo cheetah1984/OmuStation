@@ -188,7 +188,7 @@
   - ChaplainJumpsuit
   - CommonBackpack
   - ChaplainOuterClothing
-  - ChaplainBible
+  # - ChaplainBible ## Goobstation chaplain gets a bible through ChaplainUndeterminedBible
   - CivilianFormalShoes # Omu
   - Glasses
   - Survival
