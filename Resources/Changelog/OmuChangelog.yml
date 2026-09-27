@@ -8071,3 +8071,17 @@ Entries:
       message: The basic Labcoat now matches with the rest of its variants.
   id: 1050
   time: '2026-09-27T11:39:50.0000000+00:00'
+- author: SirCannonFodder
+  changes:
+    - type: Add
+      message: Advanced cyborg thruster module that's unlocked with shuttlecraft.
+    - type: Tweak
+      message: >-
+        The PKA slots for salvage cyborgs can now hold crusher weapons, drills,
+        and pickaxes.
+    - type: Add
+      message: >-
+        Cyborg postal module allowing salvage cyborgs to deliver mail. (The
+        postal module whitelist hands can hold mail of both sizes and papers)
+  id: 1051
+  time: '2026-09-27T15:28:14.0000000+00:00'
