@@ -8061,3 +8061,13 @@ Entries:
       message: Added Uppies lobby art by HotPotFam.
   id: 1049
   time: '2026-09-27T11:19:41.0000000+00:00'
+- author: DuskTheSnep
+  changes:
+    - type: Tweak
+      message: >-
+        Updated the sprites of Surgical Caps, and the icons of Medical Scrubs
+        and Medical Labcoats.
+    - type: Tweak
+      message: The basic Labcoat now matches with the rest of its variants.
+  id: 1050
+  time: '2026-09-27T11:39:50.0000000+00:00'
