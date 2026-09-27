@@ -8085,3 +8085,14 @@ Entries:
         postal module whitelist hands can hold mail of both sizes and papers)
   id: 1051
   time: '2026-09-27T15:28:14.0000000+00:00'
+- author: asterisksoda
+  changes:
+    - type: Add
+      message: >-
+        Cigarettes (regular and soaked), cigars (regular and premium), joints
+        (regular and rainbow), blunts (regular and rainbow), and the burned
+        remains of all of the previously mentioned things are now edible for
+        vox. (This does not include fillable cigarettes, such as chemlab
+        cigarettes.)
+  id: 1052
+  time: '2026-09-27T20:49:36.0000000+00:00'
