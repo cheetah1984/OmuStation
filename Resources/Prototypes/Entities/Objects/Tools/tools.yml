@@ -440,7 +440,6 @@
     - PipeStraight
     - PipeBend
     - PipeTJunction
-    - PipeManifold # Omu
     - OutletInjector
     - ManualValve
     - VolumetricPump
