@@ -8055,3 +8055,9 @@ Entries:
       message: Fixed Tajarans not cooling down in Cryopods.
   id: 1048
   time: '2026-09-26T21:55:56.0000000+00:00'
+- author: shackhorn
+  changes:
+    - type: Add
+      message: Added Uppies lobby art by HotPotFam.
+  id: 1049
+  time: '2026-09-27T11:19:41.0000000+00:00'
