@@ -8142,3 +8142,15 @@ Entries:
       message: Doubles the roundstart xeno count, more people = more fun.
   id: 1058
   time: '2026-09-28T06:15:24.0000000+00:00'
+- author: harryhulse12-alt
+  changes:
+    - type: Add
+      message: Added lodestones as a heretic knowledge from tomes
+    - type: Tweak
+      message: >-
+        Changed tome actions, they require you to be mad and stay so to keep the
+        actions.
+    - type: Add
+      message: guidebook entry for maidens
+  id: 1059
+  time: '2026-09-28T12:18:51.0000000+00:00'
