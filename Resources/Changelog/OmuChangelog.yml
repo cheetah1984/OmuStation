@@ -8176,3 +8176,11 @@ Entries:
         one to compensate.
   id: 1061
   time: '2026-09-28T14:01:14.0000000+00:00'
+- author: shackhorn
+  changes:
+    - type: Add
+      message: >-
+        Added The Stupendium - The Fine Print to the list of possible lobby
+        music. 
+  id: 1062
+  time: '2026-09-28T17:19:23.0000000+00:00'
