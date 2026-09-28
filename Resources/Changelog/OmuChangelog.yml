@@ -8154,3 +8154,13 @@ Entries:
       message: guidebook entry for maidens
   id: 1059
   time: '2026-09-28T12:18:51.0000000+00:00'
+- author: nazulinnn
+  changes:
+    - type: Add
+      message: >-
+        Added Kerfo chassis options for the engineering, salvage, janitor,
+        medical and service cyborgs.
+    - type: Add
+      message: Added the syndicate service cyborg for admin-only spawn for now.
+  id: 1060
+  time: '2026-09-28T12:54:19.0000000+00:00'
