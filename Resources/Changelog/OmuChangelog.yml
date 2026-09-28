@@ -8164,3 +8164,15 @@ Entries:
       message: Added the syndicate service cyborg for admin-only spawn for now.
   id: 1060
   time: '2026-09-28T12:54:19.0000000+00:00'
+- author: arachnid14
+  changes:
+    - type: Add
+      message: >-
+        New emag inventory for (almost) all vending machines that were
+        previously lacking them.
+    - type: Tweak
+      message: >-
+        poisoned pink donut moved from the manager wire to emag, added an extra
+        one to compensate.
+  id: 1061
+  time: '2026-09-28T14:01:14.0000000+00:00'
