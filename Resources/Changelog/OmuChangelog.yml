@@ -8190,3 +8190,9 @@ Entries:
       message: Raised the chaos score of shadowlings to 900 (was 500).
   id: 1063
   time: '2026-09-28T21:41:55.0000000+00:00'
+- author: PhantomDergwulf
+  changes:
+    - type: Add
+      message: Added Jessie Fletcher to the sectoral plushie crate
+  id: 1064
+  time: '2026-09-29T02:32:10.0000000+00:00'
