@@ -8210,3 +8210,11 @@ Entries:
         title is reserved for an upcoming mentor role.
   id: 1066
   time: '2026-09-29T15:42:07.0000000+00:00'
+- author: nnif1
+  changes:
+    - type: Add
+      message: >-
+        Added the vintage shaft miners jumpsuit and skirt to the salvage
+        loadout 
+  id: 1067
+  time: '2026-09-29T17:30:42.0000000+00:00'
