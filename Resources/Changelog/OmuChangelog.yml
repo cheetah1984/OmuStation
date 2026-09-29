@@ -8232,3 +8232,11 @@ Entries:
         admins.)
   id: 1069
   time: '2026-09-29T21:06:34.0000000+00:00'
+- author: raincall
+  changes:
+    - type: Tweak
+      message: >-
+        You need an experimental welding tool to make a weldbot now. Normal
+        welders wont work
+  id: 1070
+  time: '2026-09-29T21:16:51.0000000+00:00'
