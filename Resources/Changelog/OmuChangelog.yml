@@ -8218,3 +8218,9 @@ Entries:
         loadout 
   id: 1067
   time: '2026-09-29T17:30:42.0000000+00:00'
+- author: ggrab41
+  changes:
+    - type: Tweak
+      message: Let drones swap their built-in satchel with any other bag.
+  id: 1068
+  time: '2026-09-29T21:01:15.0000000+00:00'
