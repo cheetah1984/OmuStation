@@ -8202,3 +8202,11 @@ Entries:
       message: Made Maintenance Drones have infinite battery
   id: 1065
   time: '2026-09-29T05:36:49.0000000+00:00'
+- author: asterisksoda
+  changes:
+    - type: Remove
+      message: >-
+        Removed the alternative job title "Professor" from Librarian, as that
+        title is reserved for an upcoming mentor role.
+  id: 1066
+  time: '2026-09-29T15:42:07.0000000+00:00'
