@@ -8224,3 +8224,11 @@ Entries:
       message: Let drones swap their built-in satchel with any other bag.
   id: 1068
   time: '2026-09-29T21:01:15.0000000+00:00'
+- author: asterisksoda
+  changes:
+    - type: Remove
+      message: >-
+        Removed S.E.C. cyborgs from regular play. (They can still be spawned by
+        admins.)
+  id: 1069
+  time: '2026-09-29T21:06:34.0000000+00:00'
