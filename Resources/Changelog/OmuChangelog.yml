@@ -8286,3 +8286,9 @@ Entries:
       message: Vinyls can now be change in volume on a YAML side(or via VVedit)
   id: 1076
   time: '2026-09-30T21:43:03.0000000+00:00'
+- author: raincall
+  changes:
+    - type: Fix
+      message: Fixed surgery not working on thaven
+  id: 1077
+  time: '2026-09-30T23:25:46.0000000+00:00'
