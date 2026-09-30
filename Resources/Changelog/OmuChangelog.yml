@@ -8272,3 +8272,11 @@ Entries:
       message: Biomass reclaimer can process things without blood again
   id: 1074
   time: '2026-09-30T14:28:00.0000000+00:00'
+- author: PhosphateWithManyOs
+  changes:
+    - type: Fix
+      message: >-
+        Pressing E on the paramedic modsuit opens the inventory instead of
+        activating the siren. 
+  id: 1075
+  time: '2026-09-30T16:17:55.0000000+00:00'
