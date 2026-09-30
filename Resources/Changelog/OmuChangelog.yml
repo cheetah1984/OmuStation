@@ -8260,3 +8260,9 @@ Entries:
         be the same as any other species now.
   id: 1072
   time: '2026-09-30T10:47:40.0000000+00:00'
+- author: Quill
+  changes:
+    - type: Add
+      message: Campfires can now be used to cook food!
+  id: 1073
+  time: '2026-09-30T12:42:20.0000000+00:00'
