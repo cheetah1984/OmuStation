@@ -8266,3 +8266,9 @@ Entries:
       message: Campfires can now be used to cook food!
   id: 1073
   time: '2026-09-30T12:42:20.0000000+00:00'
+- author: Thesia000
+  changes:
+    - type: Fix
+      message: Biomass reclaimer can process things without blood again
+  id: 1074
+  time: '2026-09-30T14:28:00.0000000+00:00'
