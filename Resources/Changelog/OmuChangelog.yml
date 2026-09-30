@@ -8240,3 +8240,15 @@ Entries:
         welders wont work
   id: 1070
   time: '2026-09-29T21:16:51.0000000+00:00'
+- author: nnif1
+  changes:
+    - type: Add
+      message: Added the syndie bingle!! only obtainable from emaging slot machines
+    - type: Tweak
+      message: >-
+        Changed how the Slots work when emaged now giving you a set list of
+        items 
+    - type: Remove
+      message: Removed the throngler from the qm's slot machine
+  id: 1071
+  time: '2026-09-30T10:05:51.0000000+00:00'
