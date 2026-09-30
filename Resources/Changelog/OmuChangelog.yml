@@ -8252,3 +8252,11 @@ Entries:
       message: Removed the throngler from the qm's slot machine
   id: 1071
   time: '2026-09-30T10:05:51.0000000+00:00'
+- author: raincall
+  changes:
+    - type: Fix
+      message: >-
+        Fixed thaven organs having really low integrity all of the time, should
+        be the same as any other species now.
+  id: 1072
+  time: '2026-09-30T10:47:40.0000000+00:00'
