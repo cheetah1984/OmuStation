@@ -8316,3 +8316,9 @@ Entries:
         didn't fit right to begin with.
   id: 1079
   time: '2026-10-01T16:12:36.0000000+00:00'
+- author: CliveOcelot
+  changes:
+    - type: Remove
+      message: Removed the "You must always carry lethal weapons" thaven mood.
+  id: 1080
+  time: '2026-10-01T16:22:09.0000000+00:00'
