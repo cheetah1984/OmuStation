@@ -8304,3 +8304,15 @@ Entries:
       message: All generic cyborg chassis now get the inflatables module.
   id: 1078
   time: '2026-10-01T12:47:28.0000000+00:00'
+- author: nazulinnn
+  changes:
+    - type: Tweak
+      message: >-
+        Mothroaches can now wear almost any hat, glasses or mask and they
+        actually sit on their heads.
+    - type: Remove
+      message: >-
+        Mothroaches can no longer wear neck items, the few that were compatible
+        didn't fit right to begin with.
+  id: 1079
+  time: '2026-10-01T16:12:36.0000000+00:00'
