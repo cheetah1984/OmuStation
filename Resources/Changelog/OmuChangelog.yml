@@ -8386,3 +8386,9 @@ Entries:
         eyes night vision. 
   id: 1088
   time: '2026-10-02T15:30:52.0000000+00:00'
+- author: nnif1
+  changes:
+    - type: Add
+      message: 'Added ammo boxes for all the casull ammo types '
+  id: 1089
+  time: '2026-10-02T15:53:16.0000000+00:00'
