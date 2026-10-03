@@ -8392,3 +8392,9 @@ Entries:
       message: 'Added ammo boxes for all the casull ammo types '
   id: 1089
   time: '2026-10-02T15:53:16.0000000+00:00'
+- author: PunishedPresto
+  changes:
+    - type: Add
+      message: Added Poem of Expression Plushie to crew morale initiative crate.
+  id: 1090
+  time: '2026-10-03T02:36:16.0000000+00:00'
