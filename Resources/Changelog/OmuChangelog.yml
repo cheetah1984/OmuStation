@@ -8473,3 +8473,9 @@ Entries:
         match the Medical palette.
   id: 1099
   time: '2026-10-03T17:59:39.0000000+00:00'
+- author: PhantomDergwulf
+  changes:
+    - type: Tweak
+      message: The Staff of Animation is now admin-only
+  id: 1100
+  time: '2026-10-03T21:08:13.0000000+00:00'
