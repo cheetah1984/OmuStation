@@ -8428,3 +8428,12 @@ Entries:
         correct.
   id: 1094
   time: '2026-10-03T17:34:42.0000000+00:00'
+- author: nazulinnn
+  changes:
+    - type: Add
+      message: >-
+        Added the advanced musique cyborg module, which gives service borgs a
+        built-in digital audio workstation. Research Advanced Entertainment and
+        print it at the exosuit fabricator.
+  id: 1095
+  time: '2026-10-03T17:38:42.0000000+00:00'
