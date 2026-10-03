@@ -8414,3 +8414,9 @@ Entries:
         mk58
   id: 1092
   time: '2026-10-03T03:04:59.0000000+00:00'
+- author: QuillTheCreature
+  changes:
+    - type: Tweak
+      message: Service, Cargo and Engineering lathes now announce research unlocks.
+  id: 1093
+  time: '2026-10-03T03:30:50.0000000+00:00'
