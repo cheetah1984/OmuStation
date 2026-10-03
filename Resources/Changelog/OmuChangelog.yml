@@ -8459,3 +8459,17 @@ Entries:
         and may now take in reagents from containers while moving.
   id: 1098
   time: '2026-10-03T17:53:23.0000000+00:00'
+- author: DuskTheSnep
+  changes:
+    - type: Tweak
+      message: The Virologist's backpack now matches the Virology palette.
+    - type: Tweak
+      message: >-
+        The Scientist's backpack, satchel, duffel, and messenger bags now have
+        updated icons, and match the Science palette.
+    - type: Tweak
+      message: >-
+        The Medical Doctor's backpack, satchel, duffel, and messenger bags now
+        match the Medical palette.
+  id: 1099
+  time: '2026-10-03T17:59:39.0000000+00:00'
