@@ -8420,3 +8420,11 @@ Entries:
       message: Service, Cargo and Engineering lathes now announce research unlocks.
   id: 1093
   time: '2026-10-03T03:30:50.0000000+00:00'
+- author: jckspjf
+  changes:
+    - type: Tweak
+      message: >-
+        Syndicate Dead Drop wording has been edited to be more grammatically
+        correct.
+  id: 1094
+  time: '2026-10-03T17:34:42.0000000+00:00'
