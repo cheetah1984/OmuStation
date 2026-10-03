@@ -8451,3 +8451,11 @@ Entries:
       message: Fixed xelthia heat/cold damage modifiers not working
   id: 1097
   time: '2026-10-03T17:52:46.0000000+00:00'
+- author: Duuckie
+  changes:
+    - type: Tweak
+      message: >-
+        Hypopens take in reagents at 1.5x the former rate (now 0.5s from 0.75s)
+        and may now take in reagents from containers while moving.
+  id: 1098
+  time: '2026-10-03T17:53:23.0000000+00:00'
