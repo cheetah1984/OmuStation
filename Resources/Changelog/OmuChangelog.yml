@@ -8406,3 +8406,11 @@ Entries:
       message: Borgs from smuggler crates have modules and a battery now
   id: 1091
   time: '2026-10-03T03:03:23.0000000+00:00'
+- author: raincall
+  changes:
+    - type: Fix
+      message: >-
+        Fixed gold mk58 loadout option spawning with less mags than the normal
+        mk58
+  id: 1092
+  time: '2026-10-03T03:04:59.0000000+00:00'
