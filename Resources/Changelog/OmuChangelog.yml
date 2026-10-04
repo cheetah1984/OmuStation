@@ -8497,3 +8497,11 @@ Entries:
       message: Diseases once again regress in a dead infectee.
   id: 1103
   time: '2026-10-03T22:58:28.0000000+00:00'
+- author: CliveOcelot
+  changes:
+    - type: Tweak
+      message: >-
+        Letoferol now has a delay of 10-15 minutes before assigning the roles
+        (Same as initial infected)
+  id: 1104
+  time: '2026-10-04T01:52:56.0000000+00:00'
