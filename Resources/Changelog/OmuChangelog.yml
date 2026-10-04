@@ -8519,3 +8519,9 @@ Entries:
       message: IPC face markings are now removed after decapitation.
   id: 1106
   time: '2026-10-04T05:26:26.0000000+00:00'
+- author: asterisksoda
+  changes:
+    - type: Tweak
+      message: Increased the cage recharger charge rate to 250W (used to be 50W).
+  id: 1107
+  time: '2026-10-04T05:27:56.0000000+00:00'
