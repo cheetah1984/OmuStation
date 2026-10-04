@@ -8525,3 +8525,9 @@ Entries:
       message: Increased the cage recharger charge rate to 250W (used to be 50W).
   id: 1107
   time: '2026-10-04T05:27:56.0000000+00:00'
+- author: feistyfedora
+  changes:
+    - type: Fix
+      message: Fixed IPCs face marking glasses and other eyewear.
+  id: 1108
+  time: '2026-10-04T05:28:52.0000000+00:00'
