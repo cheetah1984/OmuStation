@@ -8505,3 +8505,11 @@ Entries:
         (Same as initial infected)
   id: 1104
   time: '2026-10-04T01:52:56.0000000+00:00'
+- author: harryhulse12-alt
+  changes:
+    - type: Fix
+      message: >-
+        Fixed interactions within nodecrawl allowing for melee and changing
+        clothes mid vent crawl.
+  id: 1105
+  time: '2026-10-04T02:03:37.0000000+00:00'
