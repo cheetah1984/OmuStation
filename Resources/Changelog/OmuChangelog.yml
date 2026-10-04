@@ -8513,3 +8513,9 @@ Entries:
         clothes mid vent crawl.
   id: 1105
   time: '2026-10-04T02:03:37.0000000+00:00'
+- author: feistyfedora
+  changes:
+    - type: Fix
+      message: IPC face markings are now removed after decapitation.
+  id: 1106
+  time: '2026-10-04T05:26:26.0000000+00:00'
