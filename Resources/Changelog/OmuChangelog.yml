@@ -8586,3 +8586,11 @@ Entries:
       message: Hijack checks now specifically ignore ghosts.
   id: 1113
   time: '2026-10-05T14:32:13.0000000+00:00'
+- author: Toaster-Box
+  changes:
+    - type: Add
+      message: >-
+        Added the secarang, a stunbaton boomerang, watch the clown catch it when
+        sec throws it at them for getting pie'd
+  id: 1114
+  time: '2026-10-05T18:57:19.0000000+00:00'
