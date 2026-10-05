@@ -8574,3 +8574,9 @@ Entries:
       message: Concussive gauntlet damage is halved when on station
   id: 1111
   time: '2026-10-05T05:29:02.0000000+00:00'
+- author: SirCannonFodder
+  changes:
+    - type: Fix
+      message: Fixed a localization error with crayons.
+  id: 1112
+  time: '2026-10-05T14:31:11.0000000+00:00'
