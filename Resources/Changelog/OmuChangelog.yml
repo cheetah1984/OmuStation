@@ -8580,3 +8580,9 @@ Entries:
       message: Fixed a localization error with crayons.
   id: 1112
   time: '2026-10-05T14:31:11.0000000+00:00'
+- author: Naaatch
+  changes:
+    - type: Fix
+      message: Hijack checks now specifically ignore ghosts.
+  id: 1113
+  time: '2026-10-05T14:32:13.0000000+00:00'
