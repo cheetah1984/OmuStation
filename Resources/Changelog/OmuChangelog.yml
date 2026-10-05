@@ -8553,3 +8553,12 @@ Entries:
       message: Guerrilla gloves are not longer quantum contraband for sec
   id: 1109
   time: '2026-10-04T15:33:21.0000000+00:00'
+- author: Duuckie
+  changes:
+    - type: Tweak
+      message: >-
+        Rhymatine's OD damage is now about half of what it used to be, taking it
+        from 7.5 vital damage per second to about 3.5. This is on-par with other
+        potent medicinal overdoses, like Bruizine.
+  id: 1110
+  time: '2026-10-05T02:11:06.0000000+00:00'
