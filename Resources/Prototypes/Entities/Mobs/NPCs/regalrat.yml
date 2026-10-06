@@ -117,7 +117,8 @@
     - SpaceItalian
     - Mouse
     understands:
-    - SpaceItalian
+   #- TauCetiBasic #Omu
+    - SpaceItalian #omu
     - Mouse
   - type: Butcherable
     spawned:
