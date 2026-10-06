@@ -8676,3 +8676,13 @@ Entries:
       message: Added Roger Cagel plushie to the crew morale crate.
   id: 1126
   time: '2026-10-06T19:00:42.0000000+00:00'
+- author: Duuckie
+  changes:
+    - type: Tweak
+      message: >-
+        The Core Rules, Roleplay Rules, and Silicon Rules have finally been
+        reworked. Characters are permitted to carry over round information
+        between rounds, but PLEASE do not use this to metagame the antags. We
+        trust you to be responsible with your LARP.
+  id: 1127
+  time: '2026-10-06T19:28:47.0000000+00:00'
