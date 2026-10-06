@@ -8658,3 +8658,9 @@ Entries:
       message: Explosive damage raised (Now only SLIGHTLY weaker than post upstream)
   id: 1123
   time: '2026-10-06T15:08:42.0000000+00:00'
+- author: raincall
+  changes:
+    - type: Fix
+      message: Fixed xelthia being poisoned by raw meat
+  id: 1124
+  time: '2026-10-06T16:44:31.0000000+00:00'
