@@ -8646,3 +8646,9 @@ Entries:
         tranquilizer shells (8u-16u).
   id: 1121
   time: '2026-10-06T05:17:44.0000000+00:00'
+- author: CliveOcelot
+  changes:
+    - type: Fix
+      message: Fixed eyes of god not working properly
+  id: 1122
+  time: '2026-10-06T05:30:30.0000000+00:00'
