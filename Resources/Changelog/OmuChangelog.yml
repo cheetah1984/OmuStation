@@ -8670,3 +8670,9 @@ Entries:
       message: Removed the thaven outlaw mood
   id: 1125
   time: '2026-10-06T18:28:49.0000000+00:00'
+- author: shackhorn
+  changes:
+    - type: Add
+      message: Added Roger Cagel plushie to the crew morale crate.
+  id: 1126
+  time: '2026-10-06T19:00:42.0000000+00:00'
