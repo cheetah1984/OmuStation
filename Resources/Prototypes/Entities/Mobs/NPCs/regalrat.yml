@@ -114,10 +114,11 @@
     speechVerb: SmallMob
   - type: LanguageKnowledge # Einstein Engines - Languages
     speaks:
-    - SpaceItalian
+    #- TauCetiBasic #Omu
+    - SpaceItalian #omu
     - Mouse
     understands:
-   #- TauCetiBasic #Omu
+    #- TauCetiBasic #Omu
     - SpaceItalian #omu
     - Mouse
   - type: Butcherable
