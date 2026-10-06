@@ -8628,3 +8628,12 @@ Entries:
         mapping standards.
   id: 1119
   time: '2026-10-06T04:06:02.0000000+00:00'
+- author: asterisksoda
+  changes:
+    - type: Add
+      message: >-
+        There is now a new lawset for silicon: Reportertron. The lawset says to
+        report on interesting situations around the station. It can be gotten in
+        ion storms.
+  id: 1120
+  time: '2026-10-06T04:06:22.0000000+00:00'
