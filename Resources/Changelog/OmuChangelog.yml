@@ -8716,3 +8716,17 @@ Entries:
         suit.
   id: 1131
   time: '2026-10-07T18:00:40.0000000+00:00'
+- author: PhantomDergwulf
+  changes:
+    - type: Tweak
+      message: >-
+        Spray painter got some love. You can now paint all your favourite
+        atmosian appliances with BZ, Nitrium, Pluoxium and Healium colours.
+    - type: Tweak
+      message: Spray painter can now spray pipes in several new standard colours
+    - type: Tweak
+      message: >-
+        Spray painter pipes category has been re-arranged to be in a more
+        reasonable colour order
+  id: 1132
+  time: '2026-10-07T18:04:37.0000000+00:00'
