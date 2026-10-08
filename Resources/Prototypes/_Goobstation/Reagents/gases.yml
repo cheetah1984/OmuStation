@@ -323,6 +323,9 @@
         - !type:ReagentCondition
           reagent: Healium
           min: 24
+        - !type:MetabolizerTypeCondition # Omu
+          type: [ Hydrakin ]
+          inverted: true
         ignoreResistances: true
         damage:
           groups:
@@ -359,6 +362,9 @@
         - !type:ReagentCondition
           reagent: Healium
           min: 4
+        - !type:MetabolizerTypeCondition # Omu
+          type: [ Hydrakin ]
+          inverted: true
       - !type:Oxygenate
         conditions:
         - !type:MetabolizerTypeCondition # Fuck you
