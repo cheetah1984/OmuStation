@@ -288,6 +288,9 @@
         - !type:BloodReagentThresholdCondition
           reagent: NitrosylPlasmide
           max: 0.01
+        - !type:MetabolizerTypeCondition # Omu
+          type: [ Hydrakin ]
+          inverted: true
         key: ForcedSleep
         component: ForcedSleeping
         time: 1
