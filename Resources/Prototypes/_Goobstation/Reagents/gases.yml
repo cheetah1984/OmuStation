@@ -259,6 +259,9 @@
         - !type:ReagentCondition
           reagent: Healium
           min: 24
+        - !type:MetabolizerTypeCondition # Omu
+          type: [ Hydrakin ]
+          inverted: true
         ignoreResistances: true
         damage:
           groups:
