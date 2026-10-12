@@ -19,6 +19,29 @@
     <ProjectReference Include="..\Content.Shared.Database\Content.Shared.Database.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="_Starlight\Plumbing\SharedPlumbingSynthesizer.cs" />
+    <Compile Remove="_Starlight\Plumbing\SharedPlumbingSmartFridge.cs" />
+    <Compile Remove="_Starlight\Plumbing\SharedPlumbingReactor.cs" />
+    <Compile Remove="_Starlight\Plumbing\SharedPlumbingPillPress.cs" />
+    <Compile Remove="_Starlight\Plumbing\SharedPlumbingFilter.cs" />
+    <Compile Remove="_Starlight\Plumbing\PlumbingVisuals.cs" />
+    <Compile Remove="_Starlight\Plumbing\Components\PlungeableComponent.cs" />
+    <Compile Remove="_Starlight\Plumbing\Components\PlumbingSynthesizerComponent.cs" />
+    <Compile Remove="_Starlight\Plumbing\Components\PlumbingSmartFridgeComponent.cs" />
+    <Compile Remove="_Starlight\Plumbing\Components\PlumbingReactorComponent.cs" />
+    <Compile Remove="_Starlight\Plumbing\Components\PlumbingPillPressComponent.cs" />
+    <Compile Remove="_Starlight\Plumbing\Components\PlumbingOutputComponent.cs" />
+    <Compile Remove="_Starlight\Plumbing\Components\PlumbingOutletComponent.cs" />
+    <Compile Remove="_Starlight\Plumbing\Components\PlumbingInputComponent.cs" />
+    <Compile Remove="_Starlight\Plumbing\Components\PlumbingInletComponent.cs" />
+    <Compile Remove="_Starlight\Plumbing\Components\PlumbingFilterComponent.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="_Starlight\Plumbing\Components\" />
+  </ItemGroup>
+
   <Import Project="..\RobustToolbox\MSBuild\Robust.Properties.targets" />
   <Import Project="..\RobustToolbox\MSBuild\Robust.CompNetworkGenerator.targets" />
 </Project>

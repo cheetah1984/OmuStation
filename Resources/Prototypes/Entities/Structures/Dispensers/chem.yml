@@ -9,7 +9,16 @@
   components:
   - type: Sprite
     sprite: Structures/dispensers.rsi
-    state: industrial-working
+    # Starlight-start: Chem Dispenser unpowered/wiring panel states
+    layers:
+      - state: industrial-off
+      - state: industrial-working
+        visible: false
+        map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+      - state: industrial-panel
+        map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+        visible: false
+    # Starlight-end
     snapCardinals: true
   - type: Storage
     openOnActivate: false
@@ -50,6 +59,26 @@
         - MachineMask
         layer:
         - MachineLayer
+        # Starlight-start: Generatable Reagents
+  - type: ReagentDispenser
+    generatableReagents:
+      Aluminium: 1 # For 1 quantity
+      Carbon: 1
+      Copper: 1
+      Hydrogen: 1
+      Oxygen: 0 # You really can't pump oxygen or generate it on 2525?
+      Sugar: 1
+      Silicon: 10
+      Phosphorus: 10
+  - type: WiresVisuals
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerCellSlotVisuals.Enabled:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+    # Starlight-end
 
 - type: entity
   id: ChemDispenser

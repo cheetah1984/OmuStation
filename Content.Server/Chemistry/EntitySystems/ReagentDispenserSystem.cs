@@ -4,6 +4,8 @@ using System.Linq;
 using Content.Server.Chemistry.Components;
 using Content.Shared.Chemistry;
 using Content.Shared.Chemistry.EntitySystems;
+using Content.Shared.Chemistry.Reagent; // Starlight-edit
+using Content.Shared.PowerCell; // Starlight-edit
 using Content.Shared.Containers.ItemSlots;
 using Content.Goobstation.Maths.FixedPoint;
 using Content.Shared.Nutrition.EntitySystems;
@@ -17,6 +19,8 @@ using Robust.Shared.Prototypes;
 using Content.Shared.Labels.Components;
 using Content.Shared.Storage;
 using Content.Server.Hands.Systems;
+using Robust.Shared.Containers; // Starlight-edit: Empty container on destruct
+using Content.Shared.Destructible; // Starlight-edit: Empty container on destruct
 
 namespace Content.Server.Chemistry.EntitySystems
 {
@@ -36,6 +40,10 @@ namespace Content.Server.Chemistry.EntitySystems
         [Dependency] private readonly OpenableSystem _openable = default!;
         [Dependency] private readonly HandsSystem _handsSystem = default!;
 
+
+        [Dependency] private readonly PowerCellSystem _powercell = default!; // Starlight-edit
+        [Dependency] private readonly SharedContainerSystem _container = default!; // Starlight-edit
+
         public override void Initialize()
         {
             base.Initialize();
@@ -51,8 +59,19 @@ namespace Content.Server.Chemistry.EntitySystems
             SubscribeLocalEvent<ReagentDispenserComponent, ReagentDispenserEjectContainerMessage>(OnEjectReagentMessage);
             SubscribeLocalEvent<ReagentDispenserComponent, ReagentDispenserClearContainerSolutionMessage>(OnClearContainerSolutionMessage);
 
+            SubscribeLocalEvent<ReagentDispenserComponent, DestructionEventArgs>(OnDestruction);  // Starlight-edit: Empty container on destruct
+
             SubscribeLocalEvent<ReagentDispenserComponent, MapInitEvent>(OnMapInit, before: new[] { typeof(ItemSlotsSystem) });
         }
+
+        // Starlight-start: Empty container on destruct
+        private void OnDestruction(EntityUid uid, ReagentDispenserComponent component, DestructionEventArgs args)
+        {
+            if (TryComp<StorageComponent>(uid, out var storage))
+                _container.EmptyContainer(storage.Container, destination: Transform(uid).Coordinates);
+        }
+        // Starlight-end
+
 
         private void SubscribeUpdateUiState<T>(Entity<ReagentDispenserComponent> ent, ref T ev)
         {
@@ -112,8 +131,20 @@ namespace Content.Server.Chemistry.EntitySystems
                     reagentColor = sol.GetColor(_prototypeManager);
                 }
 
-                inventory.Add(new ReagentInventoryItem(storageLocation, reagentLabel, quantity, reagentColor));
+                var data = new ReagentDispenseData(storageLocation, null); // Starlight-edit
+                inventory.Add(new ReagentInventoryItem(data, reagentLabel, quantity, reagentColor, false)); // Starlight-edit
             }
+            // Starlight-start: Generatable Reagents
+            foreach (var (reagent, powerDrain) in reagentDispenser.Comp.GeneratableReagents)
+            {
+                if (_prototypeManager.TryIndex<ReagentPrototype>(reagent, out var reagentPrototype))
+                {
+                    FixedPoint2 quantity = 100f;
+                    var data = new ReagentDispenseData(null, reagent);
+                    inventory.Add(new ReagentInventoryItem(data, reagentPrototype.LocalizedName, quantity, reagentPrototype.SubstanceColor, true));
+                }
+            }
+            // Starlight-end
 
             return inventory;
         }
@@ -133,28 +164,41 @@ namespace Content.Server.Chemistry.EntitySystems
             }
 
             // Ensure that the reagent is something this reagent dispenser can dispense.
-            var storageLocation = message.StorageLocation;
+            var storageLocation = message.Data.StorageLocation; // Starlight-edit
             var storedContainer = storage.StoredItems.FirstOrDefault(kvp => kvp.Value == storageLocation).Key;
-            if (storedContainer == EntityUid.Invalid)
-                return;
+            if (storedContainer != EntityUid.Invalid)
+            { // Starlight-edit
+                var outputContainer = _itemSlotsSystem.GetItemOrNull(reagentDispenser, SharedReagentDispenser.OutputSlotName);
+                if (outputContainer is not { Valid: true } || !_solutionContainerSystem.TryGetFitsInDispenser(outputContainer.Value, out var solution, out _))
+                    return;
 
-            var outputContainer = _itemSlotsSystem.GetItemOrNull(reagentDispenser, SharedReagentDispenser.OutputSlotName);
-            if (outputContainer is not { Valid: true } || !_solutionContainerSystem.TryGetFitsInDispenser(outputContainer.Value, out var solution, out _))
-                return;
-
-            if (_solutionContainerSystem.TryGetDrainableSolution(storedContainer, out var src, out _) &&
-                _solutionContainerSystem.TryGetRefillableSolution(outputContainer.Value, out var dst, out _))
-            {
-                // force open container, if applicable, to avoid confusing people on why it doesn't dispense
-                _openable.SetOpen(storedContainer, true);
-                _solutionTransferSystem.Transfer(new SolutionTransferData(reagentDispenser,
+                if (_solutionContainerSystem.TryGetDrainableSolution(storedContainer, out var src, out _) &&
+                    _solutionContainerSystem.TryGetRefillableSolution(outputContainer.Value, out var dst, out _))
+                {
+                    // force open container, if applicable, to avoid confusing people on why it doesn't dispense
+                    _openable.SetOpen(storedContainer, true);
+                    _solutionTransferSystem.Transfer(new SolutionTransferData(reagentDispenser,
                         storedContainer, src.Value,
                         outputContainer.Value, dst.Value,
                         (int)reagentDispenser.Comp.DispenseAmount));
+                }
+            }
+
+            // Starlight-start: Generatable Reagents
+            if (message.Data.ReagentID is { } reagentID && reagentDispenser.Comp.GeneratableReagents.TryGetValue(reagentID, out var powerDrain) && _powercell.HasCharge(reagentDispenser.Owner, powerDrain * (float)reagentDispenser.Comp.DispenseAmount))
+            {
+                var outputContainer = _itemSlotsSystem.GetItemOrNull(reagentDispenser, SharedReagentDispenser.OutputSlotName);
+                if (outputContainer is not { Valid: true } || !_solutionContainerSystem.TryGetFitsInDispenser(outputContainer.Value, out var solution, out _))
+                    return;
+
+                if (_solutionContainerSystem.TryGetRefillableSolution(outputContainer.Value, out var dst, out _)
+                    && _solutionContainerSystem.TryAddReagent(dst.Value, reagentID.ToString(), FixedPoint2.New((int)reagentDispenser.Comp.DispenseAmount)))
+                    _powercell.TryUseCharge(reagentDispenser.Owner, powerDrain * (float)reagentDispenser.Comp.DispenseAmount);
             }
 
             UpdateUiState(reagentDispenser);
             ClickSound(reagentDispenser);
+            // Starlight end
         }
 
         private void OnEjectReagentMessage(Entity<ReagentDispenserComponent> reagentDispenser, ref ReagentDispenserEjectContainerMessage message)
