@@ -73,8 +73,23 @@ namespace Content.Client.Chemistry.UI
             ClearButton.Disabled = castState.OutputContainer is null;
             EjectButton.Disabled = castState.OutputContainer is null;
 
+            // Starlight-start
+            EnergyDisplayBar.Value = castState.EnergyAmount;
+            EnergyDisplay.Text = Loc.GetString("mech-energy-display", ("amount", (int)Math.Round(castState.EnergyAmount * 100)));
+            // Starlight-end
+
             AmountGrid.Selected = ((int)castState.SelectedDispenseAmount).ToString();
         }
+
+        // Starlight Start
+        // Update only the energy display bar and text without refreshing the entire UI.
+        public void UpdateEnergyDisplay(float energyAmount)
+        {
+            EnergyDisplayBar.Value = energyAmount;
+            EnergyDisplay.Text = Loc.GetString("mech-energy-display", ("amount", (int)Math.Round(energyAmount * 100)));
+        }
+        // Starlight End
+
 
         /// <summary>
         /// Update the fill state and list of reagents held by the current reagent container, if applicable.

@@ -4,7 +4,7 @@
   id: ChemDispenserEmpty
   name: chemical dispenser
   suffix: Empty
-  parent: ReagentDispenserBase
+  parent: ReagentDispenserBasePowerCell # Starlight-edit: power cell chem dispenser
   description: An industrial grade chemical dispenser.
   components:
   - type: Sprite
@@ -72,12 +72,7 @@
       Phosphorus: 10
   - type: WiresVisuals
   - type: Appearance
-  - type: GenericVisualizer
-    visuals:
-      enum.PowerCellSlotVisuals.Enabled:
-        enum.PowerDeviceVisualLayers.Powered:
-          True: { visible: true }
-          False: { visible: false }
+  - type: BatteryVisuals
     # Starlight-end
 
 - type: entity
@@ -110,3 +105,14 @@
         - id: JugSilicon
         - id: JugSodium
         - id: JugSulfur
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
+        #Starlight Start
+        blacklist:
+          tags:
+          - MechReactor

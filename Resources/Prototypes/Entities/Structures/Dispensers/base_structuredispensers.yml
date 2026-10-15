@@ -2,7 +2,7 @@
 
 - type: entity
   abstract: true
-  id: ReagentDispenserBase
+  id: ReagentDispenserBaseUnpowered
   parent: SmallConstructibleMachine
   placement:
     mode: SnapgridCenter
@@ -84,8 +84,12 @@
 - type: entity
   abstract: true
   id: ReagentDispenserBasePowerCell
-  parent: ReagentDispenserBase
+  parent: ReagentDispenserBaseUnpowered
   components:
+  - type: ApcPowerReceiver
+    needsPower: true
+    powerLoad: 5 # Draw power for charging cell
+  - type: ExtensionCableReceiver
   - type: PowerCellDraw
     drawRate: 0
     useRate: 5
